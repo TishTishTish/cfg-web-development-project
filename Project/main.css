@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    color: var(--fontColor);
+    text-align: center;
+}
+body {
+    background: var(--bg);
+    background-image: var(--bgImage);
+    height: 500px;
+    background-position-y: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.logo img {
+    transition: transform .5s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.5);
+}
+
+h1 {
+    font-family: 'Metamorphous', cursive;
+}
+h2 {
+    font-family: 'Lato', sans-serif;
+}
+h3 {
+    padding-top: 800px;
+    margin-bottom: 0px;
+    font-family: 'Almendra', serif;
+    font-size: 30pt;
+}
+p {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+    font-family: 'Lato', sans-serif;
+    width: 500px;
+    font-size: 12pt;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    margin-right: 50px;
+    font-family: 'Metamorphous', cursive;
+    text-align: center;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+
+ul {
+    background: rgb(85, 50, 165);
+}
+
+li {
+    color: rgb(236, 236, 236);
+    background: rgb(85, 50, 165);
+    float: left;
+    padding: 1rem;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+li a {
+    color:  rgb(236, 236, 236);
+}
+
+li:hover {
+    background: rgb(189, 171, 13);
+    cursor: pointer;
+}
+
+/* Switching between Light and Dark Modes */
+:root {
+    --washedGrey: #ebebeb;
+    --offWhite: #dadada;
+    --night: #07002e;
+    --hgDay: url(https://cdna.artstation.com/p/assets/images/images/011/718/942/large/kseniya-dol-222.jpg?1531060876);
+    --hgNight: url(http://nerdist.com/wp-content/uploads/2017/05/giphy-1-2.gif);
+}
+/* Define variables for both modes */
+.light-theme {
+    --bg: var(--washedGrey);
+    --bgImage: var(--hgDay);
+    --fontColor: var(--night);
+    --btnBg: var(--night);
+    --btnFontColor: var(--offWhite);
+}
+.dark-theme {
+    --bg: var(--night);
+    --bgImage: var(--hgNight);
+    --fontColor: var(--washedGrey);
+    --btnBg: var(--offWhite);
+    --btnFontColor: var(--night);
+}
+/* Features of the button */
+.btn {
+    font-family: 'Almendra', serif;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+.btn:focus { /*Improves button's appearance*/
+    outline-style: none;
+}
+
+span {
+    transition: all 0.5s ease;
+}
+
+span.fade {
+    color: #4070a7;
+}
